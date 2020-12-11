@@ -7,21 +7,21 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "MenuInventory")
-public class Menu {
+public class Dish {
 	@Id
 	@Column
 	private int id;
 	@Column
 	private String name;
 	@Column
-	private String quantity;
+	private int quantity;
 	@Column
 	private double price;
 
-	public Menu() {
+	public Dish() {
 	}
 
-	public Menu(int id, String name, String quantity, double price) {
+	public Dish(int id, String name, int quantity, double price) {
 		this.id = id;
 		this.name = name;
 		this.quantity = quantity;
@@ -44,11 +44,11 @@ public class Menu {
 		this.name = name;
 	}
 
-	public String getQuantity() {
+	public int getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(String quantity) {
+	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
 

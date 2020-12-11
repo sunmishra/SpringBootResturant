@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import sh.entities.Menu;
+import sh.entities.Dish;
 import sh.repository.MenuRepo;
 
 @Service
@@ -13,7 +13,7 @@ public class MenuService {
 	@Autowired
 	private MenuRepo menuRepo;
 
-	public Menu addOrUpdateItem(Menu b) {
+	public Dish addOrUpdateItem(Dish b) {
 		return menuRepo.save(b);
 	}
 
@@ -22,11 +22,11 @@ public class MenuService {
 		menuRepo.deleteById(id);
 	}
 
-	public Menu findItem(int id) {
+	public Dish findItem(int id) {
 		return menuRepo.findById(id).get();
 	}
 
-	public List<Menu> findItems() {
+	public List<Dish> findItems() {
 		return menuRepo.findAll();
 	}
 

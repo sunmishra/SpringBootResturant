@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import sh.entities.Customer;
-import sh.entities.Menu;
+import sh.entities.Dish;
 import sh.repository.CustomerRepo;
 
 @Service
